@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="open" id="open">
+    <input type="button" value="close" id="close">
+
+    <script>
+         window.onload = function(){ //html이 먼저 뜨고 난 다음에 script 코드가 나중에 뜨라는 뜻
+            let w ; 
+            document.getElementById("open").onclick = // ()안의 id값을 가져와라 
+            function(){
+                w =  open("newPage.html", "new page", "width=400, height=300");
+            };
+
+            document.getElementById("close").onclick =
+            function(){
+                if(w) {
+                    w.close();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

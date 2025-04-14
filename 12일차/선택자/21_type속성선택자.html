@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 선택자 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+//함수를 주석처리해 보세요.
+$(function(){
+  $(":text").css("border","1px dashed #f00"); //<input type="text">인 요소만 선택해서 효과적용 
+  $(":checked").attr("checked",false);//checked요소들만 골라서 check해제 ...?
+  $(":selected").attr("selected",false);
+});
+// checked는 체크되어 있는지 여부 
+// selected는 선택된 항목인지 여부
+
+</script>
+</head>
+<body>
+   <h1>탐색 선택자</h1>
+  <p>
+   <label for="user_name">이름</label>
+   <input type="text" name="user_name" id="user_name" />
+  </p>
+  <p>
+   <input type="checkbox" name="accept" id="accept" checked="checked" />
+   <label for="accept">사용자 동의</label>
+  </p>
+  <p>
+   <select name="rel_site" id="resl_site">
+      <option value="네이버">네이버</option>
+      <option value="네이트" selected="selected">네이트</option>
+   </select>
+  </p>
+</body>
+</html>

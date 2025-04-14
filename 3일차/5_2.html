@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       #product {
+        width: 900px; height: 500px; background-color: gold; margin: 0 auto;
+       
+        /*
+        요소들 플렉스박스(flexbox) 컨테이너로 지정합니다.
+        자식 요소들을 보다 쉽게 정렬하고 배치할 수 있게 합니다.
+        */
+        display: flex;
+
+        /*
+        자식 요소들이 가로(수평) 방향으로 나열되도록 합니다.
+        옵션
+        row: 가로(왼쪽+오른쪽)
+        row-reverse: 가로(오른쪽+왼쪽)
+        column: 세로(위->아래)
+        column-reverse: 세로(아래->위)
+        */
+        flex-direction: row;
+
+        /*
+        flex-wrap : wrap;
+        자식 요소들이 한 줄을 초과할 경우, 자동으로 다음 줄로 내려가게 됩니다.
+        옵션 
+        nowrap : 한 줄에 계속 배치(기본값)
+        wrap : 여러 줄 허용
+        wrap-reverse : 여러 줄 허용(역방향)
+        */
+        flex-wrap: wrap; /*아이템이 넘치면 줄바꿈 허용용*/
+
+        justify-content: center; /*가로축 중심으로 정렬*/
+        align-content: center;   /*세로축 중심으로 정렬(줄이 여러 줄일대만 적용됨)*/
+    }
+       #product > div {
+        width: 25%; height: 30%; margin: 10px; background-color: tomato;
+       }
+    </style>
+
+
+
+</head>
+<body>
+    <div id="product">
+  
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+  
+      </div>
+</body>
+</html>

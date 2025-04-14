@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 선택자 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+  $("#wrap li").css("border","1px solid red"); //#wrap 안에 있는 모든 li 요소 선택 (자식, 손자, 증손자 모두 포함)
+});
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+  const liItems = document.querySelectorAll("#wrap li"); // #wrap 안의 모든 <li>
+  liItems.forEach(function(el) {
+    el.style.border = "1px solid red"; // 빨간 테두리 적용
+  });
+});
+*/
+</script>
+</head>
+<body>
+   <h1>인접 관계 선택자</h1>
+   <ul id="wrap">
+      <li>내용1
+         <ul>
+            <li>내용2</li>
+         </ul>
+      </li>
+   </ul>
+</body>
+</html>

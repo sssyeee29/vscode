@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+   $("h2").html("<a href='#'>HTML 메서드</a>");//html 문서에서 모든 <h2> 요소들을 선택 -> 기존 <h2> 안의 내용은 지워지고, 변경값이 들어감
+   alert( $("h1").html() ); //<h1>요소의 html 내용을 가져와서 경고창(alert)으로 출력함 
+});
+
+
+</script>
+</head>
+<body>
+<h1><strong>객체 조작 및 생성</strong></h1>
+<h2><em>html()</em></h2>
+</body>
+</html>

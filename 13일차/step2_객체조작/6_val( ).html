@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+  $("#my_name").val( $("#user_name").val() ); //#user_name 입력창에 현재 들어있는 값을 가져와서 
+                                              //#my_name 입력창에 값을 설정함 -> user랑 my랑 둘다 홍길동나옴
+});
+</script>
+</head>
+<body>
+   <p>
+    <input type="text" name="user_name" id="user_name" value="홍길동"/>
+   </p>
+   <p>
+    <input type="text" name="my_name" id="my_name" />
+   </p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="test.jsp">
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="id" size="50" placeholder="이름을 입력하세요" 
+                    maxlength="10" minlength="5">
+                </li>
+                <li>
+                    <label for="mail">메일주소</label>
+                    <input type="text" name="email" id="mail" placeholder="메일주소를 입력하세요" required>
+                </li>
+                <li>
+                    <label>전화</label>
+                    <input type="tel" name="phone" required>
+                </li>
+                <li>
+                    <input type="range" name="f1" value="1" max="5" min="1">
+                </li>
+
+                <li>
+                    <label>파일</label>
+                    <input type="file" name="file">
+                </li>
+                <!--checkbox는 여러개 선택 가능함-->
+                <input type="checkbox" name="mailing1" value="news1" checked>해외단신
+                <input type="checkbox" name="mailing2" value="news2">국내단신
+                <input type="checkbox" name="mailing3" value="news3">5분 회화
+                <br><!--checkbox는 이름이 다다른데 radio는 다 같음 그래도 값은 하나로 날라감감-->
+                <input type="radio" name="subject" value="자바" checked>자바
+                <input type="radio" name="subject" value="파이썬">파이썬
+                <input type="radio" name="subject" value="C++">C++
+            </ul>
+            <input type="submit" value="전송">
+        </fieldset>
+    </form>
+  
+</body>
+</html>

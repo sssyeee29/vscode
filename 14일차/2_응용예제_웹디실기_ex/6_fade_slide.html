@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title></title>
+
+    <style>
+
+      * {margin: 0;}
+
+      ul,li,ol {list-style: none; margin: 0; padding: 0;}
+
+
+
+      #slidewrap {width: 1000px; height: 350px; margin: 50px auto; position: relative;}
+
+
+
+      .slide {width: 100%;}
+
+      .slide > li {width: 100%; height: 350px; position: absolute; left: 0; top:0;}
+
+      .slide > li > img {width: 100%; height: 100%;}
+
+      .slide li:not(:first-child) {display: none;}
+
+
+
+      p {position: absolute; top:50%; left: 50%; text-align: center; background-color:#fff; transform: translate(-50%, -50%); 
+
+        width: 350px; border-radius: 10px; height: 60px; line-height: 60px; opacity: 0.8;}
+
+    </style>
+
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <div id="slidewrap">
+
+
+
+      <ul class="slide">
+
+
+
+        <li><img src="https://images.unsplash.com/photo-1575721697801-937774cc44ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="slide image"></li>
+
+
+
+        <li><img src="https://images.unsplash.com/photo-1503197979108-c824168d51a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExMjU4fQ&auto=format&fit=crop&w=1491&q=80" alt="slide image"></li>
+
+
+
+        <li><img src="https://images.unsplash.com/photo-1507496380922-d75b080daf03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80"  alt="slide image"></li>
+
+
+      </ul>
+
+
+
+      <p>Slide Image Text!</p>
+
+    </div>
+
+
+
+    <script>
+
+
+      /*슬라이드의 현재 인덱스를 나타내는 변수,*/
+      var i=0;
+
+
+      /*슬라이드를 한 칸씩 넘기는 기능을 정의한 함수*/
+      function slide(){
+      /*슬라이드를 다음 슬라이드로 넘기기 위해 i를 1 증가시키기기*/
+        i++;
+        /*슬라이드 인덱스가 마지막 슬라이드보다 크면-> 다시 처음(0)으로 돌아감, 즉 무한반복복*/
+        if (i > $('.slide li:last').index()){//슬라이드가 3개면 .index()값은 2니까 i가 3이 되면 다시 0으로 초기화화
+
+          i=0;
+
+        } 
+        /*i번째 슬라이드를 천천히 나타나게(fade in)합니다. stop()은 애니메이션이 겹쳐서 밀리지 않도록 이전 애니메이션을 멈춤춤 */
+        $('.slide li').eq(i).stop().fadeIn('slow');
+        /*이전 슬라이드를 사라지게(fade out)해줌, i-1이 현재 보고 있던 슬라이드임 */
+        $('.slide li').eq(i-1).stop().fadeOut();
+
+      }
+
+
+      /*slide()함수를 3초마다 실행, 따라서 3초마다 이미지가 부드럽게 바뀌는 슬라이드가 완성*/
+      setInterval(slide,3000); //1초 = 1000 밀리초 
+
+
+
+    </script>
+
+
+
+  </body>
+
+</html>
+

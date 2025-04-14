@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    var email = $("#email").val();
+    var regexp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; 
+    //^[]안에 있는것중에 하나 이상 반복해라 
+    //@[] 소.대문자, . ,- 허용하되 어떤글자든 하나만 허용
+    //.[]소.대문자를 쓰는데 2자에서 4자사이로 끝내라 
+        if (!repexp.test(email)) {
+         alert("올바른 이메일 주소가 아닙니다.");
+        $("#email").focus();
+        return false;
+  }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="email" maxlength="20"/>
+    </form>
+</body>
+</html>

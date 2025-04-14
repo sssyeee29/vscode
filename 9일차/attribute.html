@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.gilbut.co.kr">길벗</a>
+    <script>
+        const aEl = document.querySelector("a");
+        const href = aEl.getAttribute("href");
+        aEl.setAttribute("href", "http://www.sucoding.kr");
+        aEl.innerText = "수코딩"; // 여기까지 쓰면 그냥 이름 누르면 바로 사이트 이동
+        aEl.setAttribute("target", "_blank"); // 새로운 창 열리면서 사이트이동 
+    </script>
+</body>
+</html>

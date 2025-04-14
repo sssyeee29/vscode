@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<style>
+#menu li{margin:5px 0;}
+</style>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+  $("p").text( $("h1").css("color") ); //<h1>의 글자 색상rgb(0, 0, 255)을 가져와서 <p>태그 안에 텍스트로 삽입함 -> 결과는 rgb(0, 0, 255) 이렇게 나옴옴 
+  $("h2").css("color","red"); //<h2>요소의 글자색을 빨간색으로 변경함 
+});
+</script>
+</head>
+<body>
+  <h1  style="color:blue">객체 조작 및 생성</h1>
+  <p></p>
+  <h2>CSS 메서드</h2>
+</body>
+</html>

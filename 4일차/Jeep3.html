@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box; font-family: "맑은 고딕";}
+        ul,ol,li{list-style: none; margin: 0; padding: 0;}
+
+        header{width: 1185px; height: 160px; margin: 0 auto;}
+        #logo{width: 100px; height: 150px; margin: 0 auto; float: left;}
+        #logo > img{width: 200px; height: 160px; float: left;}
+
+        #login{width: 295px; height: 30px; margin : 20px 30px 0 0; float: right;}
+        #login ul{font-size: 12px; color: #666;}
+        #login li{float: left; margin: 0 5px;}
+        #login li a{text-decoration: none; font-weight: bold; color: #666;}
+        
+        nav {width: 920px; height: 40px; margin: 20px 0 0 0; float: right;}
+        nav > ul{font-size: 19px; font-weight: bold;}
+        nav > ul > li{float: left; margin: 0 40px;}
+        nav > ul > li> a{text-decoration: none; color: #000; margin: 5px 5px;}
+        nav > ul > li > a:hover{color: blue;}
+
+        #slider{width: 1475px; height: 560px; margin: 0 auto;}
+        #slider > img{width: 100%; height: 100%;} 
+
+        section{width: 1280px; height: 405px; margin: 0 auto;}
+        
+        #news{width: 345px; height: 155px; margin: 30px 0 0 35px; float: left;} 
+        #news > h3 {margin: 30px 0 20px 10px ; font-size: 16px; height: 30px; width: 100%; float: left;}
+        
+        #icon{width: 455px; height: 155px; margin: 30px 0 0 35px; float: left;}
+        #icon > .iconbox{width: 75px; height: 75px; margin: 40px 0 0 13px; float: left;}
+        #icon > .iconbox > a > img{width: 75px; height: 75px; margin: 0 auto; float: left;}
+        #icon > .iconbox > span{width: 100%; text-align: center; float: left; font-size: 12px;}
+       
+        #brand{width: 330px; height: 155px; margin: 30px 0 0 35px; float: left;}
+        #brand > p{margin:30px 0 0 35px; font-size: 16px; height: 30px; width: 100%; float: left;} 
+        #promotion{width: 345px; height: 150px; margin: 30px 0 0 35px; float: left;}
+        
+        #camp{width: 455px; height: 150px; margin: 30px 0 0 35px; float: left;}
+        
+        #store{width: 330px; height: 150px; margin: 30px 0 0 30px; float: left;}
+
+        footer{width: 100%; height: 145px; margin: 0 auto;}
+        #box {width: 1240px; height: 130px; margin: 10px auto;}
+        #box > ul {width: 750px; height: 50px; float: left; margin: 20px 0 0 40px; color: #666;}
+        #box > ul > li{font-size: 13px; margin: 5px 20px; float: left;}
+        #box > ul > li a{text-decoration: none; color: #666; margin: 0 0 20px -25px;}
+        #box > p {width: 700px; height: 50px; line-height: 20px; margin: 20px 0 0 35px; float: left; font-size: 11px;}
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="../img2/logo.jpg" alt="로고"></div>
+        <div id="login">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li>|</li>
+                <li><a href="#">회원가입</a></li>
+                <li>|</li>
+                <li><a href="#">Q & A</a></li>
+                <li>|</li>
+                <li><a href="#">LANGUAGE</a></li>
+                <li>|</li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Model</a></li>
+                <li><a href="#">Driving</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Event</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="slider"><img src="../img2/1.jpg" alt="슬라이더 이미지"></div>
+   
+    <section>
+
+        <article>
+            <div id="news">
+            <h3>NEWS</h3>
+            <p>랜드로버가 만든 정품</p>
+            </div>
+        </article>
+
+        <article>
+            <div id="icon">
+            <div class="iconbox">
+                <a href="#"><img src="../img2/icon1.jpg"></a>
+                <span>자동차</span>
+            </div>
+            <div class="iconbox">
+                <a href="#"><img src="../img2/icon2.jpg"></a>
+                <span>주의사항</span>
+            </div>
+            <div class="iconbox">
+                <a href="#"><img src="../img2/icon3.jpg"></a>
+                <span>시승신청</span>    
+            </div>
+            <div class="iconbox">
+                <a href="#"><img src="../img2/icon4.jpg"></a>
+                <span>뉴스레터신청</span>
+            </div>
+            <div class="iconbox">
+                <a href="#"><img src="../img2/icon5.jpg"></a>
+                <span>전시장찾기</span>
+            </div>
+        </div>
+        </article>
+        
+        <div id="brand">
+            <p>brand</p>
+        </div>
+        
+        <div id="promotion">
+            <p>promotion</p>
+        </div>
+        
+        <div id="camp">
+            <p>camp</p>
+        </div>
+        
+        <div id="store">
+            <p>store</p>
+        </div>
+
+    </section>
+    
+    <footer>
+        <div id="box">
+            <ul>
+
+                <li><a href="#">HOME</a></li>
+                <li>|</li>
+      
+                <li><a href="#">BUSINESS PRACTICE OFFICE</a></li>
+                <li>|</li>
+      
+                <li><a href="#">COPYRIGHT</a></li>
+                <li>|</li>
+      
+                <li><a href="#">CONTACT US</a></li>
+                <li>|</li>
+      
+                <li><a href="#">SITEMAP</a></li>
+                <li>|</li>
+      
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li>|</li>
+      
+                <li><a href="#"><a href="#">Fiat Chrysler Automobiles (FCA)</a></li>
+                <li>|</li>
+      
+                <li><a href="#">Chrysler</a></li>
+                <li>|</li>
+      
+                <li><a href="#">FIAT®</a></li>
+                <li>|</li>
+      
+              </ul>
+              <p>ⓒ 2016 Fiat Chrysler Automobiles (FCA). All Rights Reserved.<br>
+                Chrysler, Jeep 및 FIAT 로고는 Fiat Chrysler Automobiles (FCA)의 등록 상표입니다.</p>
+        </div>
+    </footer>
+</body>
+</html>

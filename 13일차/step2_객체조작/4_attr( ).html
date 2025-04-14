@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+<meta  charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+$(function(){
+  $("#txt").text($("#wrap img").attr("src")); 
+  // wrap안의 img요소 선택, 이미지의 scr 속성값을 가져옴, txt라는 p에 텍스트로 넣음 ->이미지 파일 경로가 페이지에 텍스트로 보임 
+  $("#wrap img").attr("width","200"); 
+  // wrap 안의 img 속성을 200으로 수정  
+  $("#box img").removeAttr("border");
+  // box안의 img border라는 속성 제거 
+});
+</script>
+</head>
+<body>
+<h1>객체 조작 및 생성</h1>
+<p id="wrap">
+  <img src="images/math_img_1.jpg" alt="가위" width="100" />
+</p>
+<p id="txt"></p>
+<p id="box">
+  <img src="images/math_img_3.jpg" alt="보" width="100" border="2"/>
+</p>
+</body>
+</html>
+
+<!-- .attr는 속성값(attribute)을 가져오거나 바꿀 때 사용함-->

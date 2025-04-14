@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+  //.prop 메서드를 사용해서 HTML 요소의 속성을 읽거나 바꿈 
+  //.attr()과 비슷하지만 , .prop()은 속성에 더 가까운 특성을 다룸 
+
+$(function(){
+  $("#st_1").prop("title","단락 태그");//#st_1 요소(<p id="st_1">내용1</p>)에 title 속성 추가, 마우스 올리면 툴팁으로 "단락 태그"가 뜸 
+  $("#txt1").text( $("#st_1").prop("title") ); //위에서 넣은 단락태그라는 title 속성값을 읽어서 안에 텍스트로 출력 -> txt1에는 단락태그가 나타남남
+  $("#txt2").text( $("#st_1").prop("tagName") ); // tagName은 해당 요소의 태그 이름을 가져오는 속성. #st_1은 <p>태그니까 결과는 "p"대문자로 나옴 
+  $("#txt3").text( $("#sel").prop("selectedIndex") ); //#txt3에는 #sel에서 선택된 인덱스 번호가 출력됨. (네이트가 selected니까 1이 나옴)
+});
+</script>
+</head>
+
+<body>
+  <p id="st_1">내용1</p>
+  <p id="txt1"></p>
+  <p id="txt2"></p>
+  <select id="sel">
+   <option value="naver">네이버</option>
+   <option value="nate" selected="selected">네이트</option>
+   <option value="daum">다음</option>
+  </select>
+  <p id="txt3"></p>
+</body>
+</html>

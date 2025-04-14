@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+    <title>Page title</title>
+
+    <style>
+        *  {margin: 0;}
+        /*list-style은 앞에 동그라미 기호, margin이랑 padding 0설정은 왼쪽으로 쫙붙음음*/
+        ul,li,ol {list-style: none; margin: 0; padding: 0;}
+        /*text-decoration: none;을 통해 파란글씨랑 밑줄 없애고, 글씨색 회색적용용*/
+        a{text-decoration: none; color: #666;}
+        /*margin 설정으로 왼쪽 기준을 상, 좌 50px씩 띄어짐(왼쪽으로 치우침)*/
+        .menu{margin: 50px 0 0 50px; float: left; width: 200px;}
+        /*line-height 설정으로 글씨끼리 폭이 40px만큼 넓어짐, 배경 검은색적용*/
+        .menu > li{text-align: center; line-height: 40px; background:black; position: relative;}
+        .menu > li > a{color: #fff; display: block;}
+        .menu > li:hover{background:#fff;}
+        /*원래는 하얀색인데 마우스 가져다대면 블랙*/
+        .menu > li:hover > a{color: black;}
+
+        /*다른 요소들이랑 겹칠경우 z-index 속성을 줘서 위로오게함*/
+        .sub {width: 100%; background: #ccc; display: none; position: absolute; top: 0px; left: 200px; width: 150px; z-index: 3;}
+        .sub > li:hover {background: gold; display: block;}
+</style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
+<script>
+
+    $(function(){
+        /*menu라는 클래스의 자식 li 요소에 마우스를 올렸을때 mouseenter()안의 함수가 실행*/
+        $('.menu > li').mouseenter(function(){
+            /*마우스를 올린 li안에서 .sub 클래스를 찾고, .stop()은 이전에 진행중인 애니메이션 멈추고, .fadeIn()이 서서히 나타내는 효과로 보이게 함*/
+            $(this).find('.sub').stop().fadeIn();
+            /*마우스가 li에서 빠져나가면 실행되는 함수, 모든 .sub 요소들을 .stop()으로 애니메이션 멈추고, .hide()로 즉시 사라지게함 (애니메이션x)*/
+        }).mouseleave(function(){
+            $('.sub').stop().hide();
+        });
+    });
+
+</script>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">강원도</a>
+                <ul class="sub">
+                    <li><a href="#">삼척시</a></li>
+                    <li><a href="#">동해시</a></li>
+                    <li><a href="#">태백시</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">경기도</a>
+                <ul class="sub">
+                    <li><a href="#">이천시</a></li>
+                    <li><a href="#">여주시</a></li>
+                    <li><a href="#">광주시</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="#">경상북도</a>
+                <ul class="sub">
+                    <li><a href="#">경산시</a></li>
+                    <li><a href="#">구미시</a></li>
+                    <li><a href="#">경주시</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
